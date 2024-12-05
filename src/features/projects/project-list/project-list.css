@@ -11,13 +11,14 @@
 
     p {
       grid-area: results;
+      align-self: end;
     }
 
     [role="radiogroup"] {
       grid-area: toggle;
     }
 
-    [data-layout] {
+    .content {
       grid-area: cards;
     }
 

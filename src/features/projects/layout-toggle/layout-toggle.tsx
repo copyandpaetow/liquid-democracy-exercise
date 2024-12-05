@@ -7,25 +7,29 @@ interface LayoutToggleProps {
 
 export const LayoutToggle = ({ onChange, current }: LayoutToggleProps) => {
   return (
-    <div role="radiogroup" aria-label="layout selection">
+    <div className="toggle-layout" role="radiogroup" aria-label="layout selection">
       <label>
-        grid layout
+        <span className="visually-hidden">grid layout</span>
+        <svg></svg>
         <input
           type="radio"
           name="layout"
           id="grid"
-          checked={current === "grid"}
+          defaultChecked={current === "grid"}
           onChange={() => onChange("grid")}
+          className="visually-hidden"
         />
       </label>
       <label>
-        row layout
+      <span className="visually-hidden">    row layout</span>
+      <svg></svg>
         <input
           type="radio"
           name="layout"
           id="row"
-          checked={current === "row"}
+          defaultChecked={current === "row"}
           onChange={() => onChange("row")}
+          className="visually-hidden"
         />
       </label>
     </div>

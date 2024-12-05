@@ -9,8 +9,8 @@ export const Header = ({ className = "" }: HeaderProps) => {
     <header className={`${className} main-header`}>
         <p>project overview</p>
 
-      <button>Icon 1</button>
-      <button>Icon 2</button>
+      <button><span className="visually-hidden">accessibility</span><svg></svg></button>
+      <button><span className="visually-hidden">menu</span><svg></svg></button>
     </header>
   );
 };

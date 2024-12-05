@@ -30,3 +30,11 @@
   max-width: 100%;
   width: 100%;
 }
+
+:where(button) {
+  all: unset;
+}
+
+:where(button, input, a, label:has(input)) {
+  cursor: pointer;
+}
