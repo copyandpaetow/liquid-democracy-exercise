@@ -21,3 +21,4 @@ npm run dev
 
 - tests
 - a dedicated favicon
+- any configuration like prettier/eslint/tsconfig etc. The default react-vite settings were used

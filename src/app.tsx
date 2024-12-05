@@ -1,8 +1,9 @@
+import { Home } from "./pages"
 
 
 
 export const App = () => {
 
 
-  return <></>
+  return <Home></Home>
 }

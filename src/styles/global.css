@@ -1,0 +1,32 @@
+:root,
+dialog {
+  color-scheme: light dark;
+
+  --white: oklch(0.99 0 0);
+  --black: oklch(0.05 0 0);
+  --green: oklch(0.86 0.34 143.92);
+
+  --background: light-dark(var(--white), var(--black));
+  --text: light-dark(var(--black), var(--white));
+  --primary: var(--green);
+  --primary-light: color-mix(in oklch, var(--primary), 60% transparent);
+}
+
+:where(h1, h2, h3, p, span, a) {
+  color: var(--text);
+}
+
+:where(body) {
+  background-color: var(--background);
+}
+
+.visually-hidden {
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+}

@@ -1,0 +1,32 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:where(*) {
+  margin: 0;
+  padding: 0;
+}
+
+:where(html) {
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    system-ui, sans-serif;
+  line-height: 1.5;
+  min-height: 100dvh;
+  height: 100%;
+}
+
+:where(body) {
+  height: 100%;
+}
+
+:where(ol, ul):where([role="list"]) {
+  list-style-type: none;
+}
+
+:where(img) {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
