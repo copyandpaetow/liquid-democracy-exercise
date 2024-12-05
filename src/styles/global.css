@@ -14,6 +14,12 @@ dialog {
   --border-width: 1px;
 }
 
+/*
+    in here a can react to user preferences like color scheme, contrast, animations etc
+    I only did the darkmode as we kinda get it for free in CSS
+
+*/
+
 :where(h1, h2, h3, p, span, a) {
   color: var(--text);
 }
