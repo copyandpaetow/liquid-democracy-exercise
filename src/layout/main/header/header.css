@@ -17,7 +17,7 @@
           => this would require a more sophisticated approach for each component with a resizeObserver or a global matchMedia approach
       */
     @container (max-width: 500px) {
-      & > div:first-child {
+      & > p {
         display: none;
       }
     }

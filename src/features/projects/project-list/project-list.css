@@ -1,25 +1,52 @@
 @layer components {
   .card-list {
+    container-type: inline-size;
+
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-areas:
+      "results toggle"
+      "cards cards";
+    row-gap: 2rem;
+
+    p {
+      grid-area: results;
+    }
+
+    [role="radiogroup"] {
+      grid-area: toggle;
+    }
+
     [data-layout] {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      grid-area: cards;
     }
 
-    [data-layout="grid"] {
-      flex-direction: row;
+    @container (max-width: 500px) {
+      [role="radiogroup"] {
+        display: none;
+      }
     }
-    [data-layout="row"] {
-      flex-direction: column;
-    }
+  }
 
-    [data-layout] > * {
-      flex: 1 0 250px;
-    }
+  .card-list [data-layout] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-    img {
-      object-fit: cover;
-    }
+  [data-layout="grid"] {
+    flex-direction: row;
+  }
+  [data-layout="row"] {
+    flex-direction: column;
+  }
+
+  [data-layout] > * {
+    flex: 1 0 250px;
+  }
+
+  img {
+    object-fit: cover;
   }
 }
