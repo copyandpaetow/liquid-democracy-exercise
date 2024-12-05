@@ -41,7 +41,7 @@ const buildEntry = (): Entry => ({
     duration: 70,
   },
   image: {
-    url: "/public/img1.png",
+    url: "/image1.png",
     description: "view of a beautiful city",
     attribution: "copyright by photograph",
   },
