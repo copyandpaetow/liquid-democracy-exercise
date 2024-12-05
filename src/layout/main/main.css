@@ -1,7 +1,7 @@
 @layer components {
   .main-layout {
     display: grid;
-    grid-template-columns: 1fr minmax(20rem, 60rem) 1fr;
+    grid-template-columns: 1fr minmax(18rem, 60rem) 1fr;
     grid-template-rows: 4rem;
     grid-auto-rows: min-content;
     grid-template-areas:
@@ -9,7 +9,7 @@
       ". main .";
     /*this doesnt allow for "full-bleed" layouts, which requires a slightly different syntax which is very hard to read */
 
-    height: 100vh;
+    padding-inline: 1rem;
 
     .header {
       grid-area: header;

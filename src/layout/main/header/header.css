@@ -11,6 +11,11 @@
 
     padding: 1rem;
 
+    & > p {
+      align-self: center;
+      font-size: 1.5rem;
+    }
+
     /*
           a) this is an arbitray value, we would need to see when the icon doesnt fit anymore
           b) hiding it with css still keeps it around in the dom. For an icon this doesnt matter but maybe for other content
@@ -21,12 +26,36 @@
         display: none;
       }
     }
+  }
+
+  .main-header button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 1000px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    & > span {
+      font-size: 0.75rem;
+    }
 
     svg {
       width: 20px;
       aspect-ratio: 1;
-      border: 1px solid var(--text);
+      border: var(--border-width) solid var(--text);
       border-radius: 1000px;
+    }
+
+    &:focus-visible svg {
+      outline: var(--border-width) solid var(--text);
+      outline-offset: var(--border-width);
+    }
+
+    @container (max-width: 500px) {
+      & > span {
+        display: none;
+      }
     }
   }
 }

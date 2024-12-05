@@ -9,7 +9,7 @@
       "cards cards";
     row-gap: 2rem;
 
-    p {
+    & > p {
       grid-area: results;
       align-self: end;
     }
@@ -18,18 +18,18 @@
       grid-area: toggle;
     }
 
-    .content {
+    .project-content {
       grid-area: cards;
     }
 
-    @container (max-width: 500px) {
+    @container (max-width: 400px) {
       [role="radiogroup"] {
         display: none;
       }
     }
   }
 
-  .card-list [data-layout] {
+  [data-layout] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,9 +45,5 @@
 
   [data-layout] > * {
     flex: 1 0 250px;
-  }
-
-  img {
-    object-fit: cover;
   }
 }

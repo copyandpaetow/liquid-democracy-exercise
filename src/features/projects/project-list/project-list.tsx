@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useResults } from "../api/use-results";
 import { LayoutToggle } from "../layout-toggle/layout-toggle";
 import "./project-list.css";
+import { ProjectCard } from "../card/card";
 
 export const ProjectList = () => {
   const { status, data } = useResults();
@@ -10,10 +11,10 @@ export const ProjectList = () => {
   return (
     <section className="card-list">
       {status === "error" && (
-        <p className="content">something went wrong loading</p>
+        <p className="project-content">something went wrong loading</p>
       )}
 
-      {status === "loading" && <p className="content">loading</p>}
+      {status === "loading" && <p className="project-content">loading</p>}
 
       {status === "success" && (
         <>
@@ -24,29 +25,14 @@ export const ProjectList = () => {
             onChange={(type) => setLayout(type)}
           ></LayoutToggle>
 
-          <ul className="content" data-layout={layout} role="list">
-            {data?.data.map(({ headline, subHeadline, copy, image }) => (
-              <li>
-                <span>{subHeadline}</span>
-                <h2>
-                  <a href="http://google.com">{headline}</a>
-                </h2>
-                <p>{copy}</p>
-
-                <figure>
-                  <picture>
-                    <img
-                      src={image.url}
-                      alt={image.description}
-                      loading="lazy"
-                      height="500"
-                      width="300"
-                    />
-                  </picture>
-                  <figcaption>{image.attribution}</figcaption>
-                </figure>
-              </li>
-            ))}
+          <ul className="project-content" data-layout={layout} role="list">
+            {data?.data.map(
+              (entry) => (
+                <li >
+                  <ProjectCard {...entry} layout={layout}></ProjectCard>
+                </li>
+              )
+            )}
           </ul>
         </>
       )}

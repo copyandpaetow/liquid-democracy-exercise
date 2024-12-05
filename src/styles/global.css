@@ -4,12 +4,14 @@ dialog {
 
   --white: oklch(0.99 0 0);
   --black: oklch(0.05 0 0);
-  --green: oklch(0.86 0.34 143.92);
+  --green: oklch(0.87 0.26 159.92);
 
   --background: light-dark(var(--white), var(--black));
   --text: light-dark(var(--black), var(--white));
   --primary: var(--green);
   --primary-light: color-mix(in oklch, var(--primary), 60% transparent);
+
+  --border-width: 1px;
 }
 
 :where(h1, h2, h3, p, span, a) {
