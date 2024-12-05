@@ -23,3 +23,9 @@ npm run dev
 - tests
 - a dedicated favicon
 - any configuration like prettier/eslint/tsconfig etc. The default react-vite settings were used
+- testing on other browsers besides Chrome
+
+## notes
+- as part of the assumption about the api I included a loading error in 25% of the cases. You might need to refresh if that happens
+- the data is mostly dynamic and vary between reloads
+- the design respects the dark/light mode settings of the browser / os. This can be set in the devTools e.g. chrome devTools > rendering > emulate CSS media feature prefers-color-scheme
