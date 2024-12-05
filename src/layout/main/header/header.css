@@ -1,0 +1,25 @@
+@layer components {
+  .main-header {
+    container-type: inline-size;
+
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-content: center;
+    gap: 0.5rem;
+
+    padding: 1rem;
+
+    /*
+          a) this is an arbitray value, we would need to see when the icon doesnt fit anymore
+          b) hiding it with css still keeps it around in the dom. For an icon this doesnt matter but maybe for other content
+          => this would require a more sophisticated approach for each component with a resizeObserver or a global matchMedia approach
+      */
+    @container (max-width: 500px) {
+      & > div:first-child {
+        display: none;
+      }
+    }
+  }
+}

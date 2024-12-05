@@ -1,0 +1,25 @@
+@layer components {
+  .card-list {
+    [data-layout] {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    [data-layout="grid"] {
+      flex-direction: row;
+    }
+    [data-layout="row"] {
+      flex-direction: column;
+    }
+
+    [data-layout] > * {
+      flex: 1 0 250px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
