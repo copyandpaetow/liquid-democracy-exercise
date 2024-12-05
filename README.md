@@ -16,6 +16,7 @@ npm run dev
 - the data needs to be fetched from an API and is likely be pagninated (300 entries but only 6 visible)
 - no assets were provided, so I either copied them or look for something similar
 - CSR is used for simplicity, realistically this would be a SSR/SSG project
+- no external libraries should be used
 
 ## Things left out on purpose
 
